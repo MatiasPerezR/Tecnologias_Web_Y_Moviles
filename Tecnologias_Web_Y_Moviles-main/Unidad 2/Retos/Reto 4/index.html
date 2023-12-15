@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IMC y Salud</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Calculadora de IMC y Salud</h1>
+    <form id="healthForm">
+      <label for="nombre">Nombre del paciente: </label>
+      <input type="text" id="nombre" required>
+      
+      <label for="peso">Peso (kg): </label>
+      <input type="number" id="peso" required>
+      
+      <label for="altura">Altura (m): </label>
+      <input type="number" step="0.01" id="altura" required>
+      
+      <label for="edad">Edad (años): </label>
+      <input type="number" id="edad" required>
+      
+      <label for="genero">Género: </label>
+      <select id="genero" required>
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+      </select>
+      
+      <label for="actividad">Nivel de Actividad Física: </label>
+      <select id="actividad" required>
+        <option value="sedentario">Sedentario</option>
+        <option value="moderado">Moderado</option>
+        <option value="activo">Activo</option>
+      </select>
+      
+      <button type="button" onclick="calcularSalud()">Calcular</button>
+    </form>
+    
+    <div id="resultados" style="display: none;">
+      <h2>Resultados:</h2>
+      <p id="imcResultado">IMC: 0.0</p>
+      <p id="clasificacionResultado">Clasificación: No disponible</p>
+      <p id="gedResultado">Gasto Energético Diario: 0.0 kcal</p>
+      <p id="estadoNutricionalResultado">Estado Nutricional: No disponible</p>
+    </div>
+  </div>
+
+  <script src="Reto_N4.js"></script>
+</body>
+</html>

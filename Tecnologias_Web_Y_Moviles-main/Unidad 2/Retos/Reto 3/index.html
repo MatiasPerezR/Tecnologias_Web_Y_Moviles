@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Propina</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Calculadora de Propina</h1>
+    <form id="tipForm">
+      <label for="total">Monto de la Boleta (CLP): </label>
+      <input type="text" id="total" placeholder="Ingrese el monto" required>
+      
+      <label for="Porcentaje">Porcentaje de Propina: </label>
+      <select id="Porcentaje" required>
+        <option value="10">10%</option>
+        <option value="15">15%</option>
+        <option value="20">20%</option>
+      </select>
+      
+      <button type="button" onclick="calcularPropina()">Calcular</button>
+    </form>
+    
+    <div id="resultado" style="display: none;">
+      <h2>Resultado:</h2>
+      <p id="propinaResultado">Propina: $0</p>
+      <p id="totalResultado">Total a Pagar: $0</p>
+    </div>
+  </div>
+
+  <script src="Reto_3.js"></script>
+</body>
+</html>
